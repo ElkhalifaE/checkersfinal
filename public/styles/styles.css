@@ -1,0 +1,86 @@
+body
+{
+    background-color: paleturquoise;
+    margin: 0;
+    padding: 0;
+}
+table
+{
+    background-color: white;
+    border-spacing:0;
+    margin:0;
+}
+h2
+{
+    position:fixed;
+    top:0;
+    left:45rem;
+    float:right;
+    font-size: 5rem;
+}
+.r {color:red;}
+.b {color:black;}
+.table
+{
+    margin: 0;
+    padding: 0;
+    height: 40rem;
+    width: 40rem;
+    background-color: white;
+}
+.tile
+{
+    padding:0;
+    display:inline-block;
+    margin-right: 5rem;
+    height: 5rem;
+    width: 5rem;
+    background-color: gray;
+}
+.odd
+{
+    position:relative;
+    left:5rem;
+}
+/* The pieces are going to be absolute with their "parents" as the tiles on the board, use DOM to find "tile" 
+element to be moved, once found, delete it, then "add" it under the parent of the correct one.*/
+.bPiece
+{
+    position: absolute;
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: black;
+}
+.rPiece
+{
+    position: absolute;
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: red;
+}
+/* Position is absolute and their "parents" will be the piece of congruent color, each piece has a crown on it.
+Use DOM, classlist add/remove logic to make them visible, allow them different moves etc. when appropriate*/
+.bCrown
+{
+    position:absolute;
+    height: 3rem;
+    width: 3rem;
+    left:1rem;
+    top:1rem;
+}
+.rCrown
+{
+    position:absolute;
+    height: 3rem;
+    width: 3rem;
+    left:1rem;
+    top:1rem;
+}
+.invisibleCrown
+{
+    visibility:hidden;
+}
